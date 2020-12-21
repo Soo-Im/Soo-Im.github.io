@@ -9,9 +9,9 @@ My new goal is to analyze social/economic data and find out their relationship w
 
 ### Languages
 
-What am I use for statistical analysis
+What am I use for statistical analysis...
 
 ```markdown
 NCL     # Powerful analysis/visualization tools for meteorological data. 
 Python  
-'''
+```
