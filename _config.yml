@@ -21,4 +21,4 @@ plugins:
   - jekyll-feed
   - jekyll-menus
 
-theme: jekyll-theme-slate
+theme: jekyll-theme-cayman
