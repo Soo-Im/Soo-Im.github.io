@@ -1,16 +1,12 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Hello, I'm Soo!
 ---
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+데이터 분석가를 꿈꾸는 Soo 입니다.  
+대기과학 및 기후학 전공자로 대학원에서 기상 데이터를 통계 분석하였고,  
+현재 비재무 데이터 수집 및 DB 구축 자동화 직무를 맡고 있습니다.  
+  
+자세한 포트폴리오 및 경력은 Linkedin과 Github를 참고해주세요.  
+항상 성장하는 데이터 분석가가 되겠습니다!
