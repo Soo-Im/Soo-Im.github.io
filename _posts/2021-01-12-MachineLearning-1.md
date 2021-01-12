@@ -4,7 +4,7 @@ title: 머신러닝 야학 1일차 강의
 subtitle: 머신러닝 이론
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
-tags: [TIL, Boostcourse]
+tags: [TIL, MachineLearning]
 comments: true
 ---
 
