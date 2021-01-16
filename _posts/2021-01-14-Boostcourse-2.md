@@ -15,14 +15,14 @@ comments: true
 3. source code &#8594; **compiler** &#8594; machine code (binary code*: *은 기계가 실행 가능한 코드라는 의미)
 <<<<<<< HEAD
 
-### 외부 프로그램 link
+### 외부 프로그램과 make
 
 두 커맨드는 동일하게 작동한다.
 
-'''
-$ clang 프로그램.c -lcs50 
-$ make 프로그램
-'''
+    $ clang program.c -lcs50
+
+    $ make program
+
 
 첫번째는 clang 컴파일러를 이용할 때 cs50이라는 외부 프로그램을 link(-l)한다는 의미이고, make는 위 과정을 자동으로 진행한다.  
 주의할 점은 make를 사용할 때 확장자를 붙여서 쓰면 안된다.
