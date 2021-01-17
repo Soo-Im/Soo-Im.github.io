@@ -29,18 +29,16 @@ comments: true
 
 ### loop
 1. syntactic sugar란 아래와 같이 syntax를 간결하게 표현하는 것을 말한다.   
-''' C
-var = var + 1;
-var += 1;
-var++;
-'''  
+  
+    var = var + 1;
+    var += 1;
+    var++;
+  
 2. while과 for은 다음과 같은 차이가 있다.
-''' C
-while(True)
-for(int i=0; i<50; i++;)
-'''  
+  
+    while(True)
+
+    for(int i=0; i<50; i++;)
+  
 while은 조건문 하나를 받지만, for은 루프를 위해 세 개의 인자를 받는다.  
    
-   
-=======
->>>>>>> 439bc7dfcddb3c9623c81c30497d20de04c88367
