@@ -32,7 +32,7 @@ comments: true
 <code>
 var = var + 1;    
 var += 1;
-var++1;
+var++;
 </code>
 </pre>
   
@@ -41,7 +41,7 @@ var++1;
 <pre>
 <code>
 while(True){}    
-for(int i=0; i<50; i++;){}
+for(int i=0; i<50; i++){}
 </code>
 </pre>    
   
