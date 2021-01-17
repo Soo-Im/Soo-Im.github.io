@@ -25,20 +25,21 @@ comments: true
 
 첫번째는 clang 컴파일러를 이용할 때 cs50이라는 외부 프로그램을 link(-l)한다는 의미이고, make는 위 과정을 자동으로 진행한다.  
 주의할 점은 make를 사용할 때 확장자를 붙여서 쓰면 안된다.
-<<<<<<< HEAD
 
 ### loop
 1. syntactic sugar란 아래와 같이 syntax를 간결하게 표현하는 것을 말한다.   
   
-    var = var + 1;
-    var += 1;
-    var++;
+    var = var + 1;  
+    
+    var += 1;  
+    
+    var++;  
   
-2. while과 for은 다음과 같은 차이가 있다.
+2. while과 for은 다음과 같은 차이가 있다.  
   
-    while(True)
-
-    for(int i=0; i<50; i++;)
+    while(True)  
+    
+    for(int i=0; i<50; i++;)  
   
 while은 조건문 하나를 받지만, for은 루프를 위해 세 개의 인자를 받는다.  
    
