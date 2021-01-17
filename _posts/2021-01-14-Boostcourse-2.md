@@ -55,7 +55,7 @@ while은 조건문 하나를 받지만, for은 루프를 위해 세 개의 인�
 (void, int...) Fuction_name (void, int...)
 </code>
 </pre>
-3. do-while; do문을 실행한 후 참/거짓에 따라 반복할 수 있다. 즉 while은 True가 전제되어야 실행할 수 있지만 이 경우 최소 1회를 실행할 수 있다.
+3. do-while; do문을 실행한 후 참/거짓에 따라 반복할 수 있다. 즉 while은 True가 전제되어야 하지만 do-while은 True와 무관하게 최소 1회 해당 구문을 실행할 수 있다.
 <pre>
 <code>
 do
