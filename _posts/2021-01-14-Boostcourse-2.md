@@ -19,7 +19,6 @@ comments: true
 두 커맨드는 동일하게 작동한다.
 
     $ clang program.c -lcs50
-
     $ make program
 
 
@@ -27,19 +26,24 @@ comments: true
 주의할 점은 make를 사용할 때 확장자를 붙여서 쓰면 안된다.
 
 ### loop
-1. syntactic sugar란 아래와 같이 syntax를 간결하게 표현하는 것을 말한다.   
-  
-    var = var + 1;  
-    
-    var += 1;  
-    
-    var++;  
+1. syntactic sugar란 아래와 같이 syntax를 간결하게 표현하는 것을 말한다.
+
+<pre>
+<code>
+var = var + 1;    
+var += 1;
+var++1;
+</code>
+</pre>
   
 2. while과 for은 다음과 같은 차이가 있다.  
-  
-    while(True)  
-    
-    for(int i=0; i<50; i++;)  
+
+<pre>
+<code>
+while(True){}    
+for(int i=0; i<50; i++;){}
+</code>
+</pre>    
   
 while은 조건문 하나를 받지만, for은 루프를 위해 세 개의 인자를 받는다.  
    
