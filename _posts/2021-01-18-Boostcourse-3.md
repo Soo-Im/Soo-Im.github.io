@@ -18,14 +18,28 @@ comments: true
 ### 4. Linking
 모든 소스 코드를 (예: stdio.h, cs50.h, ...) 한꺼번에 처리하여 하나의 a.out 파일로 만든다.
 
-## Array
-
+## Array and else
+### 1. Array
+같은 자료형을 가진 값의 리스트를 의미한다. C에서는 아래와 같이 사용한다. 그리고 **C의 배열은 길이를 기억하지 않는다**는 것도 유의할 것.  
 <pre>
 <code>
-var = var + 1;    
-var += 1;
-var++;
+int scores[3];
+scores[0] = 55;
+...
 </code>
 </pre>
   
+### 2. 일종의(?) 튜플
+C에서 상수는(파이썬의 tuple과 같은 것) 아래와 같이 정의한다.
+이는 global variable (전역 변수)라고 부른다.  
+참고: type casting이란 자료형을 바꾸는 것을 말한다
 
+<pre>
+<code>
+const int N = 3; // 대문자
+
+int main(void) // main 상단에 정의
+{
+...
+</code>
+</pre>
