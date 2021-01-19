@@ -20,7 +20,7 @@ comments: true
 
 ## Array and else
 ### 1. Array
-같은 자료형을 가진 값의 리스트를 의미한다. C에서는 아래와 같이 사용한다. 그리고 **C의 배열은 길이를 기억하지 않는다**는 것도 유의할 것.  
+같은 자료형을 가진 값의 리스트를 의미한다.  
 <pre>
 <code>
 int scores[3];
@@ -28,7 +28,13 @@ scores[0] = 55;
 ...
 </code>
 </pre>
-  
+주의해야 할 점은 첫째, **변수를 이용해 배열의 길이를 설정할 수 없으며** 둘째, **C의 배열은 길이를 기억하지 않는다**. 따라서 아래의 코드는 syntax error가 발생한다.
+<pre>
+<code>
+numbers = 3;
+int scores[numbers]; // 에러 발생!
+</code>
+</pre>
 ### 2. 일종의(?) 튜플
 C에서 상수는(파이썬의 tuple과 같은 것) 아래와 같이 정의한다.
 이는 global variable (전역 변수)라고 부른다.  
