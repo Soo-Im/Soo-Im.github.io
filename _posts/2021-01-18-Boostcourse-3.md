@@ -18,7 +18,7 @@ comments: true
 ### 4. Linking
 모든 소스 코드를 (예: stdio.h, cs50.h, ...) 한꺼번에 처리하여 하나의 a.out 파일로 만든다.
 
-## Array and else
+## Array and String
 ### 1. Array
 같은 자료형을 가진 값의 리스트를 의미한다.  
 <pre>
@@ -35,7 +35,40 @@ numbers = 3;
 int scores[numbers]; // 에러 발생!
 </code>
 </pre>
-### 2. 일종의(?) 튜플
+
+### 2. String
+#### 1) string = array of char
+string은 char의 array이다. 즉 s[0], s[1]
+...와 같이 사용할 수 있다. 그러나 이는 **stdio.h에 포함된 자료형이 아니라는 데 주의해야 한다.**  
+cs50.h나 string.h 헤더파일 없이 선언하려면 아래와 같이 작성해야 한다.
+<pre>
+<code>
+char str[] = "Hello";
+printf("%s",str); // 이상하게도 %s는 작동한다.
+</code>
+</pre>
+
+#### 2) string의 크기
+string의 크기는 문자열의 크기에 비례한다. 문자열의 끝, 즉 길이를 결정하는 것이 null character (\0)이다. 따라서 실제 문자열의 크기보다 1바이트 더 크다.
+
+#### 3) string indexing
+string 내 문자는 2차원 배열로 표현할 수 있다.
+<pre>
+<code>
+#include <cs50.h>
+...
+
+string names[4];
+names[0] = "Soo";
+...
+
+// 아래 코드는 동일한 기능을 한다.
+printf("%s", names[0]);
+printf("%c%c%c", names[0][0], names[0][1], names[0][2]);
+</code>
+</pre>
+
+### 3. 기타
 C에서 상수는(파이썬의 tuple과 같은 것) 아래와 같이 정의한다.
 이는 global variable (전역 변수)라고 부른다.  
 참고: type casting이란 자료형을 바꾸는 것을 말한다
