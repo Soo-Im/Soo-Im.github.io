@@ -49,7 +49,7 @@ printf("%s",str); // 이상하게도 %s는 작동한다.
 </pre>
 
 #### 2) string의 크기
-string의 크기는 문자열의 크기에 비례한다. 문자열의 끝, 즉 길이를 결정하는 것이 null character (\0)이다. 따라서 실제 문자열의 크기보다 1바이트 더 크다.
+string의 크기는 문자열의 크기에 비례한다. 문자열의 끝, 즉 길이를 결정하는 것이 null character '\0'이다. 따라서 실제 문자열의 크기보다 1바이트 더 크다.
 
 #### 3) string indexing
 string 내 문자는 2차원 배열로 표현할 수 있다.
@@ -68,7 +68,12 @@ printf("%c%c%c", names[0][0], names[0][1], names[0][2]);
 </code>
 </pre>
 
+#### 4) <string.h>
+string.h 헤더 파일에는 strlen, 등의 함수가 있다.
+
+
 ### 3. 기타
+#### 1) Constant 상수 정의
 C에서 상수는(파이썬의 tuple과 같은 것) 아래와 같이 정의한다.
 이는 global variable (전역 변수)라고 부른다.  
 참고: type casting이란 자료형을 바꾸는 것을 말한다
@@ -82,3 +87,15 @@ int main(void) // main 상단에 정의
 ...
 </code>
 </pre>
+
+#### 2) for 문 활용
+아래의 코드는 동일한 기능을 한다.
+
+<pre>
+<code>
+string s = "HI"
+
+for (int i = 0; i < strlen(s); i++) {}
+for (int i=0, n=strlen(s); i < n; i++) {} // 초기화를 통해 불필요한 함수 호출 횟수를 줄였다. 참고로 i와 n 모두 같은 자료형이기 때문에 굳이 n 앞에 int를 붙일 필요가 없다.
+</code>
+</pre
