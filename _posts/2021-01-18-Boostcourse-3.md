@@ -98,4 +98,25 @@ string s = "HI"
 for (int i = 0; i < strlen(s); i++) {}
 for (int i=0, n=strlen(s); i < n; i++) {} // 초기화를 통해 불필요한 함수 호출 횟수를 줄였다. 참고로 i와 n 모두 같은 자료형이기 때문에 굳이 n 앞에 int를 붙일 필요가 없다.
 </code>
-</pre
+</pre>
+
+#### 3) 명령행 인자
+<pre>
+<code>
+#include <stido.h>
+
+int main(int argc, string argv[])
+{
+    // argc (argument count): 입력된 변수의 개수
+    // argv (argument vector): 입력된 변수가 저장되는 vector
+    
+    if (argc == 2)     // 프로그램을 실행할 때 INPUT argument가 하나 들어왔는지 확인한다.
+    ...                // argc가 1이 아닌 2인 이유는 ./program INPUT 에서 "./program"이 첫 번째 argument이기 때문이다.
+}
+
+</code>
+</pre>
+
+#### 4) return 0;
+일반적으로 return 0는 프로그램에 문제가 없음을 의미한다. Python에서 code exit with 0인 것과 같은 의미.  
+main 함수에서 에러가 발생했음을 알리려면 retrun 1;을 하면 된다.
