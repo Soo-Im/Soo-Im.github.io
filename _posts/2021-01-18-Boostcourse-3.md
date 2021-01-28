@@ -120,10 +120,8 @@ main 함수에서 에러가 발생했음을 알리려면 retrun 1;을 하면 된
 int *ip는 integer 자료형 변수의 주소를 저장하는 ip를 정의한다는 뜻이다. 굳이 변수명이 아닌 포인터를 사용하는 이유는 함수에 변수를 넣는 등의 행위를 할 때마다 메모리가 소모되기 때문이다.
 <pre>
 <code>
-int *ip;
 int num = 1;
-
-ip = &num;          // &변수 = 변수의 메모리 주소. 실행할 때마다 주소는 달라진다.
+int *ip = &num;          // &변수 = 변수의 메모리 주소. 실행할 때마다 주소는 달라진다.
 
 printf("Address of the variable: %p", ip);
 printf("Address of the variable: %p", &num); // 두 출력의 결과는 같다. ex) 0x7ffff6cdffa8
