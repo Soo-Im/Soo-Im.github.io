@@ -131,3 +131,22 @@ printf("Address of the variable: %p", &num); // 두 출력의 결과는 같다. 
 printf("Variable in address: %i", *ip);      // 해당 주소의 변수를 출력한다. ex) 1 
 </code>
 </pre>
+
+또한 pointer는 array 내에서 메모리를 옮겨다닐 때 매우 유용하다. array가 아닌 변수 여러 개는 메모리에 랜덤으로 배치가 되지만, array를 사용하면 변수가 메모리에 순서대로 들어가기 때문에 pointer을 바꿈으로써 다른 변수에 접속할 수 있기 때문이다.
+<pre>
+<code>
+int x = 1;
+int y = 2;
+int *xip = &x;
+
+xip++;              // 주소에서 1만큼 이동
+printf("Variable in xip++: %i", *xip);      // y를 출력하지 않고 NaN을 출력한다.
+
+int nums[] = {1, 2, 3, 4};
+int *numip = &nums[0];
+
+printf("Variable in xip: %i", *numip);         // 1 을 출력한다.
+numip++;
+printf("Variable in xip++: %i", *numip);      // 2를 출력한다.
+</code>
+</pre>
