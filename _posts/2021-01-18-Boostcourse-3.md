@@ -10,7 +10,7 @@ comments: true
 
 # Compiling 4단계
 ## 1. Preprocessing (전처리)
-소스 코드 맨 위의 #include <...>에 해당하는 헤더 파일의 함수를 불러온다.
+소스 코드 맨 위의 <code>#include <...> </code>에 해당하는 헤더 파일의 함수를 불러온다.
 ## 2. Compiling
 소스 코드가 CPU가 이해할 수 있는 어셈블리 코드로 전환된다. 
 ## 3. Assembling
@@ -65,9 +65,6 @@ printf("%c%c%c", names[0][0], names[0][1], names[0][2]);
 </code>
 </pre>
 
-### 4) <string.h>
-string.h 헤더 파일에는 strlen, 등의 함수가 있다.
-
 
 ## 3. 기타
 ### 1) Constant 상수 정의
@@ -80,8 +77,7 @@ C에서 상수는(파이썬의 tuple과 같은 것) 아래와 같이 정의한�
 const int N = 3; // 대문자
 
 int main(void) // main 상단에 정의
-{
-...
+{ ... }
 </code>
 </pre>
 
@@ -108,7 +104,6 @@ int main(int argc, string argv[])
     if (argc == 2)     // 프로그램을 실행할 때 INPUT argument가 하나 들어왔는지 확인한다.
     ...                // argc가 1이 아닌 2인 이유는 ./program INPUT 에서 "./program"이 첫 번째 argument이기 때문이다.
 }
-
 </code>
 </pre>
 
