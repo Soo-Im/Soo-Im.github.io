@@ -25,7 +25,7 @@ print("%p\n",p);    // 16진수 포인터를 출력한다.
 print("%i\n",*p);   // 포인터에 저장된 변수(50)를 출력한다.
 </code></pre>
 
-## 문자열 = 포인터
+# 문자열 = 포인터
 지금까지 <code>cs50.h</code>라이브러리를 이용해서 사용한 string은 사실 포인터이다.  
 예를 들어 <code>string s = "HI";</code>라고 정의한다면 s에 저장된 값은 "H"의 포인터이다. 
 즉 다음과 같이 표현할 수 있다.
@@ -48,7 +48,7 @@ printf("%p\n",&s);  // 0x7f... (s 자체의 주소)
 printf("%c\n",*s);  // h (s는 기본적으로 문자열의 첫 번째 주소를 저장한다. 따라서 *s를 출력하면 h만 나온다.)
 </code></pre>
 
-### 문자열의 복사
+## 메모리 할당과 문자열의 복사
 string은 포인터이기 때문에 <code>t = s;</code>와 같은 방식으로는 내부에 들어있는 값을 복사할 수 없다.
 <pre><code>
 string s = "hello";
@@ -62,10 +62,10 @@ print("%s",s);
 </code></pre>
 
 그렇다면 문자열은 어떻게 복사할 수 있을까? 미리 빈 메모리를 할당한 다음에 기존 메모리 안의 값을 하나하나 복사하면 된다. 
-메모리를 할당하는 함수는 <code>stdlib.h</code> 안의 <code>strcpy</code>이다.
+<code>stdlib.h</code>의 <code>malloc</code>(memory allocation)은 할당한 메모리의 주소를 전달한다.
 <pre><code>
 char *s = "hi";
-char *t = malloc(strlen(s)+1);          // +1은 null 종단문자 (\0)을 위한 공간이다.
+char *t = malloc(strlen(s)+1);  // +1은 null 종단문자 (\0)을 위한 공간이다. 메모리의 주소는 t에 저장된다.
 
 // strcpy는 아래와 같은 루프로 표현할 수 있다. 
     // for (int i=0, n=strlen(s)+1; i<n; i++) 
@@ -80,3 +80,9 @@ t[0] = toupper(t[0]);
 printf("%s\n",s);   // hi
 printf("%s\n",t);   // Hi
 </code></pre>
+
+## 메모리의 해제
+메모리 할당을 반복하다보면 메모리 부족 문제를 겪을 수 있다. 이는 <code>[~]$ valgrind code.c</code>라는 리눅스 커맨드를 통해 확인할 수 있다.
+'memory leaks' 라는 출력이 나오면 메모리 손실이 발생했다는 의미이다. 이는 <code>free</code>를 이용해 메모리를 해제함으로써 해결할 수 있다.
+  위의 코드에서 <code>free(t);</code>를 입력하면 t 주소에 할당된 메모리가 해제된다.
+
