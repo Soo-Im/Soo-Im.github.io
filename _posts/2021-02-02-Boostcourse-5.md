@@ -50,6 +50,7 @@ printf("%c\n",*s);  // h (s는 기본적으로 문자열의 첫 번째 주소를
 
 ## 메모리 할당과 문자열의 복사
 string은 포인터이기 때문에 <code>t = s;</code>와 같은 방식으로는 내부에 들어있는 값을 복사할 수 없다.
+
 <pre><code>
 string s = "hello";
 string t = s;
@@ -63,6 +64,7 @@ print("%s",s);
 
 그렇다면 문자열은 어떻게 복사할 수 있을까? 미리 빈 메모리를 할당한 다음에 기존 메모리 안의 값을 하나하나 복사하면 된다. 
 <code>stdlib.h</code>의 <code>malloc</code>(memory allocation)은 할당한 메모리의 주소를 전달한다.
+
 <pre><code>
 char *s = "hi";
 char *t = malloc(strlen(s)+1);  // +1은 null 종단문자 (\0)을 위한 공간이다. 메모리의 주소는 t에 저장된다.
