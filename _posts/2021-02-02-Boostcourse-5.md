@@ -83,6 +83,7 @@ printf("%s\n",s);   // hi
 printf("%s\n",t);   // Hi
 </code></pre>
 
+
 ## 메모리의 해제
 메모리 할당을 반복하다보면 메모리 부족 문제를 겪을 수 있다. 이는 <code>$ valgrind code.c</code> 라는 리눅스 커맨드를 통해 확인할 수 있다.
 'memory leaks' 라는 출력이 나오면 메모리 손실이 발생했다는 의미이다. 이는 <code>free</code>를 이용해 메모리를 해제함으로써 해결할 수 있다.  
