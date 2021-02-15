@@ -48,7 +48,8 @@ printf("%p\n",&s);  // 0x7f... (s 자체의 주소)
 printf("%c\n",*s);  // h (s는 기본적으로 문자열의 첫 번째 주소를 저장한다. 따라서 *s를 출력하면 h만 나온다.)
 </code></pre>
 
-## 메모리 할당과 문자열의 복사
+# 메모리 할당
+## 메모리 할당을 통한 문자열 복사
 string은 포인터이기 때문에 <code>t = s;</code>와 같은 방식으로는 내부에 들어있는 값을 복사할 수 없다.
 
 <pre><code>
@@ -83,8 +84,14 @@ printf("%s\n",s);   // hi
 printf("%s\n",t);   // Hi
 </code></pre>
 
-
 ## 메모리의 해제
 메모리 할당을 반복하다보면 메모리 부족 문제를 겪을 수 있다. 이는 <code>$ valgrind code.c</code> 라는 리눅스 커맨드를 통해 확인할 수 있다.
 'memory leaks' 라는 출력이 나오면 메모리 손실이 발생했다는 의미이다. 이는 <code>free</code>를 이용해 메모리를 해제함으로써 해결할 수 있다.  
 위의 코드에서 <code>free(t);</code>를 입력하면 t 주소에 할당된 메모리가 해제된다.
+
+## 메모리 구역
+프로그램을 실행하면 아래 그림과 같이 메모리가 할당된다.  
+<img width="100" alt="memory_layout" src="https://user-images.githubusercontent.com/40853572/107961217-ef21d600-6fe8-11eb-8ccb-4d93e9d21225.png">
+machine code는 문자 그대로 프로그램 머신코드 자체, globals는 전역 변수가 저장되는 곳이고
+heap은 <code>malloc</code>을 이용해 할당한 변수, stack은 main 혹은 함수의 지역 변수가 저장되는 곳이다.  
+main에서 특정 함수를 호출하면 main의 지역 변수가 실제로 들어가는 것이 아니라 지역 변수의 복사된 값이 들어가는 것이므로 
