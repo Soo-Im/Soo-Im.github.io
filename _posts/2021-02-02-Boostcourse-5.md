@@ -104,20 +104,21 @@ print("%s",s);
  
 <pre><code>
 char *s = "hi";
-char *t = malloc(strlen(s)+1);  // +1은 null 종단문자 (\0)을 위한 공간이다. 메모리의 주소는 t에 저장된다.
+char *t = malloc(strlen(s)+1);  // +1은 종단문자(\0)을 위한 공간
 
-// strcpy는 아래와 같은 루프로 표현할 수 있다. 
-    // for (int i=0, n=strlen(s)+1; i<n; i++) 
-    // {
-    //     t[i] = s[i];
-    // }
+strcpy(t,s);    // strcpy: string을 다른 포인터에 복제하는 함수
 
-strcpy(t, s);
+"""
+strcpy는 아래와 같은 loop로 표현할 수 있다.
 
-t[0] = toupper(t[0]);
+for(int i=0, n=strlen(s)+1; i++)
+{t[i] = s[i];}
+"""
 
-printf("%s\n",s);   // hi
-printf("%s\n",t);   // Hi
+t[0] = toupper(t[0]);   // 첫 글자를 대문자로
+
+printf("%s",s);   // hi
+printf("%s",t);   // Hi
 </code></pre>
 
 
