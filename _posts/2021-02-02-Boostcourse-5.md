@@ -131,7 +131,7 @@ printf("%s\n",t);   // Hi
 프로그램을 실행하면 아래 그림과 같이 메모리가 할당된다.  
 
 
-<src="https://user-images.githubusercontent.com/40853572/107961217-ef21d600-6fe8-11eb-8ccb-4d93e9d21225.png">
+<img src="https://user-images.githubusercontent.com/40853572/107961217-ef21d600-6fe8-11eb-8ccb-4d93e9d21225.png" width="200">
 
 
 machine code는 문자 그대로 프로그램 머신코드 자체, globals는 전역 변수가 저장되는 곳이고
