@@ -32,14 +32,21 @@ print("%i\n",*p);   // 포인터에 저장된 변수(50)를 출력한다.
 지금까지 <code>cs50.h</code>라이브러리를 이용해서 사용한 string은 사실 포인터이다.  
 예를 들어 <code>string s = "HI";</code>라고 정의한다면 s에 저장된 값은 "H"의 포인터이다. 
 즉 다음과 같이 표현할 수 있다.
+
+
 <pre><code>
 string s = "HI";
 char *s = "HI";
 </code></pre>
+
+
 그래서 string을 <code>s == t</code>와 같이 직접 비교할 수 없는 것이다. <code>s</code>와 <code>t</code>에는 각각의 주소가 들어있기 때문이다.
 
 string을 직접 정의하면 아래와 같다. <code>char *</code>은 이 값의 형태가 문자의 주소가 된다는 의미이다.
+
+
 <pre><code>typedef char *string;</code></pre> 
+
 
 이제 string 혹은 char &#8727; 변수의 여러 특성을 출력해보자.
 
@@ -51,10 +58,30 @@ printf("%s\n",s);   // hi
 printf("%p\n",s);   // 0x42... (hi의 주소)
 printf("%p\n",&s);  // 0x7f... (s 자체의 주소)
 printf("%c\n",*s);  // h (s는 기본적으로 문자열의 첫 번째 주소를 저장한다. 따라서 *s를 출력하면 h만 나온다.)
+printf("%c\n",&s[0]);  // 0x42... s가 아닌 hi의 주소가 나오는 이유는 s[0] 자체가 s가 아닌 s에 저장된 "h"를 의미하기 때문이다. 따라서 h의 주소이자 &s인 0x42가 나온다. 
+
 </code></pre>
 
 
 # 메모리 할당
+## 포인터와 메모리 할당
+
+
+<pre><code>
+int *x;
+*x = 5;     // 에러 발생
+
+int *y;
+y = malloc(sizeof(int));  // 메모리=포인티 공간 할당
+*y = 10;    // 정상적인 포인티 할당
+
+</code></pre>
+
+
+<code>x</code>의 포인티(포인터가 가리키는 곳) 할당에서 에러가 발생하는 이유는 <code>int *x;</code>에서 초기화되지 않은 <code>x</code>에 비정상적인 주소가 할당되었기 때문이다.
+따라서 포인터를 사용하려면 <code>int *x = 5;</code>처럼 처음부터 그 값을 지정해주거나 <code>malloc</code>을 이용해 메모리를 할당해야 한다. 다만 후자는 실제로 활용하는 일이 거의 없으니 참고로만 알아둘 것.
+
+
 ## 메모리 할당을 통한 문자열 복사
 string은 포인터이기 때문에 <code>t = s;</code>와 같은 방식으로는 내부에 들어있는 값을 복사할 수 없다.
   
@@ -99,14 +126,19 @@ printf("%s\n",t);   // Hi
 'memory leaks' 라는 출력이 나오면 메모리 손실이 발생했다는 의미이다. 이는 <code>free</code>를 이용해 메모리를 해제함으로써 해결할 수 있다.  
 위의 코드에서 <code>free(t);</code>를 입력하면 t 주소에 할당된 메모리가 해제된다.
 
+
 ## 메모리 할당 구역과 함수의 사용
 프로그램을 실행하면 아래 그림과 같이 메모리가 할당된다.  
-  <src="https://user-images.githubusercontent.com/40853572/107961217-ef21d600-6fe8-11eb-8ccb-4d93e9d21225.png">  
-  machine code는 문자 그대로 프로그램 머신코드 자체, globals는 전역 변수가 저장되는 곳이고
+
+
+<src="https://user-images.githubusercontent.com/40853572/107961217-ef21d600-6fe8-11eb-8ccb-4d93e9d21225.png">
+
+
+machine code는 문자 그대로 프로그램 머신코드 자체, globals는 전역 변수가 저장되는 곳이고
 heap은 <code>malloc</code>을 이용해 할당한 변수, stack은 main 혹은 함수의 지역 변수가 저장되는 곳이다.
 main을 포함한 함수를 사용하면 stack 공간에 함수별로 각 변수가 저장된다. 즉, 함수 내의 변수는 섞이지 않는다. 
-(사이트 이름이기도 한 stack overflow는 잘못된 재귀함수 호출로 인해 stack이 넘친다는 뜻이다.)
-  따라서 main 안의 변수를 함수의 인자로 전달하면 main의 지역 변수가 실제로 들어가는 것이 아니라 지역 변수의 복사된 값이 들어가게 되면서 main의 변수는 변하지 않는다.
+(사이트 이름이기도 한 stack overflow는 잘못된 재귀함수 호출로 인해 stack이 넘친다는 뜻이다.)  
+따라서 main 안의 변수를 함수의 인자로 전달하면 main의 지역 변수가 실제로 들어가는 것이 아니라 지역 변수의 복사된 값이 들어가게 되면서 main의 변수는 변하지 않는다.
 
 
 <pre><code>
