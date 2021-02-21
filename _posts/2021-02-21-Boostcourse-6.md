@@ -23,3 +23,23 @@ int *tmp = realloc(list, 4 * sizeof(int));  // tmp 포인터에 4개의 정수 �
 list = tmp;     // 위에서 해제된 list 대신 새롭게 list를 만들어 tmp와 같은 위치 가리키게 만들기
 list[2] = 4;    // 새로운 list 값 저장
 </code></pre>
+
+# Data Structure
+## linked list
+배열은 인덱싱을 통해 값에 빠르게 접근할 수 있다는 장점이 있지만, 크기를 바꾸려면 <code>realloc</code> 등의 함수를 이용해 O(n)의 작업을 해야 한다는 단점이 있다.
+연결 리스트란 배열처럼 연속된 메모리를 사용하는 대신 임의의 위치에 값을 저장한 후 다음 값이 위치한 메모리를 가리키는 포인터를 함께 저장하는 것이다.
+
+<img src="https://user-images.githubusercontent.com/40853572/108630149-baa99080-74a6-11eb-9738-4e76248af900.png" width="300">
+
+연결 리스트는 다음과 같은 구조체, 즉 <code>struct</code>로 정의할 수 있다.
+
+<pre><code>
+// node는 number와 pointer을 가지는 구조체이다. 이전과 다르게 struct 뒤에 node를 또 쓰는 이유는 typedef 안에서 'node'라는 문자를 사용하기 위함이다.
+
+typedef struct node         
+{
+    int number;             // 저장하는 값 number
+    struct node *next       // 다음 node를 가리키기 위한 포인터 *next
+}
+node;
+</code></pre>
