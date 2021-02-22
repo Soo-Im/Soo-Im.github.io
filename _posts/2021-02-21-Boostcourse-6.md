@@ -8,8 +8,8 @@ tags: [TIL, Boostcourse]
 comments: true
 ---
 
-# 메모리 주소
-## realloc
+# 메모리 할당
+## 1. realloc
 기존에 할당된 배열의 크기를 바꾸기 위한 함수. 기존의 배열 크기를 수정하는 단계 중에서 ((1) 원하는 크기의 임시 메모리(tmp) 할당, (2) tmp에 기존 메모리(list)의 값을 복사,
 (3) tmp에 새로운 값 추가 혹은 수정, (4) list 해제, (5) 새로운 list 정의하여 tmp 포인터 복사) (1)~(4)까지의 단계를 한 번에 수행해준다.
 
@@ -25,7 +25,7 @@ list[2] = 4;    // 새로운 list 값 저장
 </code></pre>
 
 # Data Structure
-## linked list
+## 1. linked list
 배열은 인덱싱을 통해 값에 빠르게 접근할 수 있다는 장점이 있지만, 크기를 바꾸려면 <code>realloc</code> 등의 함수를 이용해 O(n)의 작업을 해야 한다는 단점이 있다.
 연결 리스트란 배열처럼 연속된 메모리를 사용하는 대신 임의의 위치에 값을 저장한 후 다음 값이 위치한 메모리를 가리키는 포인터를 함께 저장하는 것이다.
 
@@ -42,4 +42,20 @@ typedef struct node
     struct node *next       // 다음 node를 가리키기 위한 포인터 *next
 }
 node;
+</code></pre>
+
+<pre><code>
+
+node *list = NULL;
+
+node *n = malloc(sizeof(node));
+// (*n).number = 2;
+if (n != NULL)
+{
+    n->number = 2;
+    n->next = NULL;
+}
+
+list = n;
+
 </code></pre>
