@@ -1,1 +1,62 @@
-<mxfile host="app.diagrams.net" modified="2021-11-15T13:29:45.221Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" version="15.4.1" etag="nvZTxPPS1mpASZzb1NH0" type="github"><diagram id="FOBhiicGWprKujb0KLX5">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-11-15T13:40:14.902Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="O5wPhN6EBP1T3gcHxl_C" version="15.4.1" type="github">
+  <diagram id="FOBhiicGWprKujb0KLX5" name="Page-1">
+    <mxGraphModel dx="860" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="reKBDXHytK7gLTZPrWmi-26" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="136" y="10" width="374" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-3" value="#TODO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="60" width="290" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="110" width="290" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-10" value="&lt;ul&gt;&lt;li&gt;&lt;strike&gt;TODO 1&lt;/strike&gt;&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;TODO 2&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;TODO 3&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="190" y="130" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-11" value="TODO 입력란" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="240" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-12" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="310" y="140" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-14" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="170" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-15" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="200" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-16" value="입력" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="245" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-17" value="&lt;ul&gt;&lt;li&gt;&lt;strike&gt;TODO 1&lt;/strike&gt;&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="340" y="130" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-18" value="" style="curved=1;endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="reKBDXHytK7gLTZPrWmi-10" target="reKBDXHytK7gLTZPrWmi-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="130" as="sourcePoint" />
+            <mxPoint x="440" y="80" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="100" />
+              <mxPoint x="400" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-22" value="생활코딩" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="310" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-23" value="벨로그" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="256" y="310" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-24" value="노마드" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="333" y="310" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="reKBDXHytK7gLTZPrWmi-25" value="부트코스" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="410" y="310" width="60" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
